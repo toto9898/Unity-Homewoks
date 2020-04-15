@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 07ed3360625216c46838bbe28a5f8126
+guid: 45cb9be93fe30c846babc7945986ffd9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1529002859755582034
-    second: Mario Extra Sprites_0
+      213: -4909138104176222734
+    second: Mario Power Up Sprite Sheet_0
   - first:
-      213: -4312424913082566700
-    second: Mario Extra Sprites_1
-  - first:
-      213: 7170503051156138286
-    second: Mario Extra Sprites_2
-  - first:
-      213: -6408906170345990373
-    second: Mario Extra Sprites_3
+      213: 7567407974791610021
+    second: Mario Power Up Sprite Sheet_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -135,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mario Extra Sprites_0
+      name: Mario Power Up Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 50
-        width: 16
-        height: 16
+        x: 5
+        y: 2
+        width: 15
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 252b94cfffb183510800000000000000
-      internalID: 1529002859755582034
+      spriteID: 2fddd3b67ec3fdbb0800000000000000
+      internalID: -4909138104176222734
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mario Extra Sprites_1
+      name: Mario Power Up Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 1
-        y: 34
-        width: 16
-        height: 15
+        x: 22
+        y: 2
+        width: 14
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,50 +164,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d73b27c3603724c0800000000000000
-      internalID: -4312424913082566700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mario Extra Sprites_2
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 17
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e292409b88eb28360800000000000000
-      internalID: 7170503051156138286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mario Extra Sprites_3
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 1
-        width: 16
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b17d7bd3bcdfe07a0800000000000000
-      internalID: -6408906170345990373
+      spriteID: 5ae79ef8575d40960800000000000000
+      internalID: 7567407974791610021
       vertices: []
       indices: 
       edges: []
@@ -221,7 +173,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1351af8b989cd2442a9e9bb6b1bbddd2
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

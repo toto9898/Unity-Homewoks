@@ -9,11 +9,12 @@ public class PlayerMovement : MonoBehaviour {
 	private float moveSpeed = 2;
 
 	[SerializeField]
-	[Range(0.1f, 2)]
-	public float gravity = 0.5f;
+	[Range(0.1f, 5)]
+	public float gravity = 9.81f;
 
 	private bool isCrouching = false;
 	private bool isJumping = false;
+	private bool big = false;
 	private readonly float movementThreshold = 0.01f;
 	private Vector2 velocity = Vector2.zero;
 
@@ -48,7 +49,7 @@ public class PlayerMovement : MonoBehaviour {
 		}
 
 		if (!isJumping && Input.GetKeyDown(jumpKey)) {
-			velocity.y = 1;
+			velocity.y = 1f;
 			isJumping = true;
 			animator.SetBool("IsJumping", true);
 		}
@@ -66,5 +67,15 @@ public class PlayerMovement : MonoBehaviour {
 			animator.SetBool("IsJumping", false);
 			velocity.y = 0;
 		}
+
+		if (!big && collision.gameObject.CompareTag("Mushroom"))
+		{
+			animator.SetBool("isEatingMushroom", true);
+			big = true;
+			
+		}
+		else
+			animator.SetBool("isEatingMushroom", false);
+
 	}
 }
