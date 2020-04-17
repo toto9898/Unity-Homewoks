@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using static UnityEngine.Mathf;
 using static StateMachineUtil;
+using static AICounterDecider;
 
 public class AIRetreatState : StateMachineBehaviour {
 
@@ -9,6 +10,9 @@ public class AIRetreatState : StateMachineBehaviour {
 	private float delay = 0.3f;
 
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+		if (CounterKick(animator))
+			return;
+
 		float moveDirection = -Sign(animator.transform.localScale.x);
 		MovementController movementController = animator.GetComponent<MovementController>();
 		movementController.SetHorizontalMoveDirection(moveDirection);

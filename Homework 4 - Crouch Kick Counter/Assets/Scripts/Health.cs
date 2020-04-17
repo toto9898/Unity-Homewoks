@@ -32,10 +32,13 @@ public class Health : MonoBehaviour {
 		animator.SetTrigger("TookDamage");
 	}
 
-	private void OnTriggerEnter2D(Collider2D collision) {
-		if (collision.transform.parent != transform
-			&& collision.gameObject.CompareTag("Hitbox")) {
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		animator.GetCurrentAnimatorStateInfo(0).IsName("Monk_Crouch_Kick");
 
+		if (collision.transform.parent != transform
+		&& collision.gameObject.CompareTag("Hitbox"))
+		{
 			TakeDamage();
 		}
 	}
