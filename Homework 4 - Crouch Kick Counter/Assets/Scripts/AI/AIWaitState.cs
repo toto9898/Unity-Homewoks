@@ -10,13 +10,14 @@ public class AIWaitState : StateMachineBehaviour {
 		movementController = animator.GetComponent<MovementController>();
 		movementController.SetHorizontalMoveDirection(0);
 		player = GameObject.FindWithTag("Player").transform;
+
+		CounterKick(animator);
 	}
 	
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		if (CounterKick(animator))
-			return;
-
 		float directionToPlayer = player.position.x - animator.transform.position.x;
 		movementController.TurnTowards(directionToPlayer);
+	
+		CounterKick(animator);
 	}
 }

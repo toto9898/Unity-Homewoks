@@ -19,9 +19,8 @@ public class MonkIdleWalkBlendState : StateMachineBehaviour
 		DoMove(animator, movementController);
 
 		if (Input.GetKeyDown(attackKey))
-		{
-			animator.SetTrigger("IsPunching");
-		}
+			animator.SetBool("IsPunching", true);
+
 		if (Input.GetKeyDown(jumpKey))
 		{
 			animator.SetBool("IsJumping", true);

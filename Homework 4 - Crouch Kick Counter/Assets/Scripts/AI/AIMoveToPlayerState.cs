@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using static Controlls;
 using static UnityEngine.Mathf;
-using static AICounterDecider;
 
 public class AIMoveToPlayerState : StateMachineBehaviour {
 
@@ -24,18 +23,13 @@ public class AIMoveToPlayerState : StateMachineBehaviour {
 	}
 
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		if (CounterKick(animator))
-			return;
 
 		Vector3 vectorToPlayer = player.position - animator.transform.position;
 		float distanceToPlayer = vectorToPlayer.magnitude;
 
-		if (distanceToPlayer > wantedDistanceToPlayer) {
+		if (distanceToPlayer > wantedDistanceToPlayer)
 			movementController.SetHorizontalMoveDirection(Sign(vectorToPlayer.x));
-		} else if (Input.GetKey(attackKey)) {
-			animator.SetBool("ShouldCounter", true);
-		} else {
+		else
 			animator.SetBool("ShouldPunch", true);
-		}
 	}
 }

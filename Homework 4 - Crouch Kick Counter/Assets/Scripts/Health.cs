@@ -1,7 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using static UnityEngine.Mathf;
 
 public class Health : MonoBehaviour {
+
+	public event Action OnTakeDamage;
 
 	[SerializeField]
 	private int health = 100;
@@ -30,12 +33,12 @@ public class Health : MonoBehaviour {
 		health = Max(health - damage, 0);
 		animator.SetInteger("Health", health);
 		animator.SetTrigger("TookDamage");
+
+		OnTakeDamage?.Invoke();
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		animator.GetCurrentAnimatorStateInfo(0).IsName("Monk_Crouch_Kick");
-
 		if (collision.transform.parent != transform
 		&& collision.gameObject.CompareTag("Hitbox"))
 		{
